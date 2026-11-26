@@ -1,16 +1,25 @@
+
 pluginManagement {
     repositories {
         google()
-        mavenCentral()
+        maven {
+            url 'https://maven-central.storage-download.googleapis.com/maven2'
+        }
         gradlePluginPortal()
+        mavenCentral()
     }
 }
+
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
+        maven {
+            url 'https://maven-central.storage-download.googleapis.com/maven2'
+        }
         mavenCentral()
     }
 }
-rootProject.name = "RStarAndroidPrinterBridge"
-include(":app")
+
+rootProject.name = 'RStarAndroidPrinterBridge'
+include ':app'
